@@ -446,7 +446,7 @@ export default function App() {
                           <div className="flex-1 text-center border-x-2 border-indigo-100 dark:border-gray-700"><label className="text-[10px] font-black text-indigo-400">Dupur</label><input type="number" step="0.5" value={lun} onChange={e=>setLun(e.target.value)} className="w-full bg-transparent text-center text-xl font-black dark:text-white" /></div>
                           <div className="flex-1 text-center"><label className="text-[10px] font-black text-indigo-400">Raat</label><input type="number" step="0.5" value={din} onChange={e=>setDin(e.target.value)} className="w-full bg-transparent text-center text-xl font-black dark:text-white" /></div>
                       </div>
-                      <button className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black shadow-xl">{t('submitMeal')}</button>
+                      <button type="submit" className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black shadow-xl">{t('submitMeal')}</button>
                   </form>
                   <div className="bg-white dark:bg-gray-800 rounded-[40px] shadow-lg border dark:border-gray-700 overflow-hidden h-fit">
                       <h2 className="p-6 font-black bg-indigo-50 dark:bg-gray-700 border-b dark:border-gray-600">My Recent Meals</h2>
@@ -591,7 +591,7 @@ export default function App() {
                          <div className="flex-1"><input type="number" step="0.5" value={lun} onChange={e=>setLun(e.target.value)} className="w-full text-center text-2xl font-black bg-transparent dark:text-white" /></div>
                          <div className="flex-1"><input type="number" step="0.5" value={din} onChange={e=>setDin(e.target.value)} className="w-full text-center text-2xl font-black bg-transparent dark:text-white" /></div>
                       </div>
-                      <button className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black">ADD</button>
+                      <button type="submit" className="w-full bg-indigo-600 text-white py-4 rounded-2xl font-black">ADD</button>
                    </form>
                  )}
                  {user?.role === 'admin' && (
@@ -599,7 +599,7 @@ export default function App() {
                       <h2 className="font-black text-yellow-700 dark:text-yellow-500 pb-2">🏖️ Add Leave</h2>
                       <select name="m" className="w-full p-4 bg-white dark:bg-gray-800 border-2 dark:border-gray-600 rounded-2xl font-bold dark:text-white">{(members||[]).map(m => <option key={m.id} value={m.name}>{m.name}</option>)}</select>
                       <div className="flex gap-2"><input name="s" type="date" required className="w-full p-4 bg-white dark:bg-gray-800 border-2 dark:border-gray-600 rounded-2xl font-bold dark:text-white" defaultValue={todayDateStr}/><input name="e" type="date" required className="w-full p-4 bg-white dark:bg-gray-800 border-2 dark:border-gray-600 rounded-2xl font-bold dark:text-white"/></div>
-                      <button className="w-full bg-yellow-500 text-white p-4 rounded-2xl font-black shadow-lg">SAVE LEAVE</button>
+                      <button type="submit" className="w-full bg-yellow-500 text-white p-4 rounded-2xl font-black shadow-lg">SAVE LEAVE</button>
                    </form>
                  )}
               </div>
